@@ -1,0 +1,244 @@
+body{
+    background: rgb(63,77,181);
+    background: radial-gradient(circle, rgba(63,77,181,0.5271358543417367) 50%, rgba(0,0,0,0.7008053221288515) 100%);
+  }
+  .completed {
+    background-color: #d3d3d3; /* Change background color for completed tasks */
+    text-decoration: line-through; /* Add line-through for completed tasks */
+  }
+  h3{
+    cursor: pointer;
+    font-family: sans-serif;
+  }
+  .image{
+    border-radius: 100%;
+    height: 50px;
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .line{
+    border-left: 1px solid gray;
+    height: 100%;
+  }
+  .title{
+    width: 480px;
+    height: 100%;
+    text-align: center;
+  }
+  .todo-item {
+    background-image: url(../public/46464.png);
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  li{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .action{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .todo-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .toggle{
+    background-color: #020202;
+  
+  }
+  .complete {
+    font-family: verdana;
+    font-weight: bold;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #D3DE3E;
+    box-shadow: 1px 1px 3px #3A00F9;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 0px solid #3866A3;
+    background: #12A108;
+    background: linear-gradient(to top, #12A108, #0FFF27);
+  }
+  .complete:hover {
+    color: #000000 !important;
+    background: #A1CF6C;
+    background: linear-gradient(to top, #A1CF6C, #85EEBA);
+  }
+  
+  
+  .delete {
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: helvetica;
+    font-weight: bold;
+    color: #000000 !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #D3DE3E;
+    box-shadow: 1px 1px 3px #3A00F9;
+    padding: 4px 10px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #FF5286;
+    background: linear-gradient(to top, #FF5286, #FF0000);
+  }
+  .delete:hover {
+    color: #14396A !important;
+    background: #CF0CBC;
+    background: linear-gradient(to top, #CF0CBC, #9700EE);
+  }
+  
+  
+  .todo-item button:hover {
+    background-color: #f793b1;
+  }
+  
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url(../public/bg-image.png);
+    /* background-size: cover; Cover the entire container with the background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .panel {
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  input:focus {
+      background: #F2F2F2;
+      border: 1px solid #5A7EC7;
+      border-radius: 10px;
+  }
+  
+  .submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit:hover {
+    background-color: #45a049;
+  }
+  
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  
+  @import url("https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap");
+  
+  svg {
+      font-family: "Rubik 80s Fade", sans-serif;
+      width: 100%; height: 100%;
+  }
+  svg text {
+      animation: stroke 5s infinite alternate;
+      stroke-width: 2;
+      stroke: #8F9730;
+      font-size: 100px;
+  }
+  @keyframes stroke {
+      0%   {
+          fill: rgba(143,151,48,0); stroke: rgba(143,151,48,1);
+          stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+      }
+      70%  {fill: rgba(143,151,48,0); stroke: rgba(143,151,48,1); }
+      80%  {fill: rgba(143,151,48,0); stroke: rgba(143,151,48,1); stroke-width: 3; }
+      100% {
+          fill: rgba(143,151,48,1); stroke: rgba(143,151,48,0);
+          stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+      }
+  }
+  
+  .glitch-wrapper {
+    width: calc(100% - 100px);  
+    height: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #68686856;
+  }
+  
+  .glitch {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    z-index: 1;
+  }
+  
+  .glitch:before,
+  .glitch:after {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  
+  .glitch:before {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    color: #FF5454;
+    z-index: -1;
+  }
+  
+  .glitch:after {
+    animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    color: #0F38FF;
+    z-index: -2;
+  }
+  
+  @keyframes glitch-it {
+    0% {
+       transform: translate(0);
+    }
+    20% {
+       transform: translate(-2px, 2px);
+    }
+    40% {
+       transform: translate(-2px, -2px);
+    }
+    60% {
+       transform: translate(2px, 2px);
+    }
+    80% {
+       transform: translate(2px, -2px);
+    }
+    to {
+       transform: translate(0);
+    }
+  }
+  
+  
+  
+  
